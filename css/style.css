@@ -1,0 +1,172 @@
+/*Your Code Here*/
+
+/*Write selector/rule property to add your border when
+links in the navigation are in the hover or focus state.*/
+nav a:hover, 
+nav a:focus {
+     border: 2px dotted purple;
+}
+
+/*Write selector/rule property to position the default position for the skip class element*/
+.skip a{
+     position: relative;
+     top: -65px;
+}
+
+/*Write selector/rule property to position the skip class element when it is in focus*/
+.skip a:focus{
+     top: 20px;
+}
+
+
+/*Write selector/rule property to style all elements when in focus*/
+:focus {
+     border: 5px dashed green;
+}
+nav a:hover, 
+nav a:focus {
+     border: 2px dotted purple;
+}
+
+/*Write selector/rule property to style the container */
+.container {
+     display: grid;
+     grid-template-columns: repeat(5, 1fr);
+     gap: 13px;
+}
+/* 
+
+img {
+     max-height: 675px;
+} */
+
+/*Write selector/rule property to add the background image to the first div in the grid and place it in the grid. */
+.container > :first-child{
+     grid-column: 1 / -1;
+     background-image: url("../images/header.jpg");
+     background-repeat: no-repeat;
+}
+
+
+/* Steps 6 and 7: Write the selector/rule properties to  place the next five elements in the next
+ five rows in the grid. */
+     
+      /*This will be a lot of rules.... but be strategic and combine selectors*/
+     .container img{
+          width: 100%;
+          height: 100%;
+          max-height: 675px;
+     }
+     .accounts{
+          grid-area: 2 / 2 / 3 / 5 ;
+     }
+     .accounts-image{
+          grid-area: 2 / 1 / 3 / 6 ;
+     }
+
+     .onlinebanking{
+          grid-area: 3 / 2 / 4 / 5 ;
+     }
+     .onlinebanking-image{
+          grid-area: 3 / 1 / 4 / 6 ;
+     }
+
+     .security{
+          grid-area: 4 / 2 / 5 / 5 ;
+     }
+     .security-image{
+          grid-area: 4 / 1 / 5 / 6 ;
+     }
+
+     .loans{
+          grid-area: 5 / 2 / 6 / 5 ;
+     }
+     .loans-image{
+          grid-area: 5 / 1 / 6 / 6 ;
+     }
+
+     .contact{
+          grid-area: 6 / 2 / 7 / 5 ;
+     }
+     .contact-image{
+          grid-area: 6 / 1 / 7 / 6 ;
+     }
+
+ /* Step 8: Write the selector/rule property to style the .text-block class. */
+     
+     .text-block{
+          text-align: center;
+          margin: auto;
+     }
+     .text-block h2, .text-block p {
+          place-items: center;
+     }
+     .text-block ul {
+          text-align: left;
+     }
+
+/* Add your media query here */
+@media (min-width: 825px) {
+  /* Step 10: Write the selector/rule property to style the nav element */
+     nav {
+          text-align: right;
+          padding: 35px 0;
+     }
+
+  /* Step 11: Write the selector/rule property to update the .container class */
+     .container {
+          grid-template-columns: repeat(7, 1fr);
+     }
+
+
+  /* Steps 12 - 15: Update the grid-column property of the grid's children (where-needed)*/
+
+     .accounts{
+          grid-area: 2 / 4 / 3 / 7 ;
+     }
+     .accounts-image{
+          grid-area: 2 / 1 / 3 / 6 ;
+     }
+
+     .onlinebanking{
+          grid-area: 3 / 2 / 4 / 5 ;
+     }
+     .onlinebanking-image{
+          grid-area: 3 / 3 / 4 / 8 ;
+     }
+
+     .security{
+          grid-area: 4 / 4 / 5 / 7 ;
+     }
+     .security-image{
+          grid-area: 4 / 1 / 5 / 6 ;
+     }
+
+     .loans{
+          grid-area: 5 / 2 / 6 / 5 ;
+     }
+     .loans-image{
+          grid-area: 5 / 3 / 6 / 8 ;
+     }
+
+     .contact{
+          grid-area: 6 / 4 / 7 / 7 ;
+     }
+     .contact-image{
+          grid-area: 6 / 1 / 7 / 6 ;
+     }
+
+ /* Step 16:Write the selector/rule property to update the .text-block class */
+
+     .text-block{
+          max-height: 235px;
+          overflow: hidden;
+     }
+     /* .text-block h2, .text-block p {
+          place-items: center;
+     }
+     .text-block ul {
+          text-align: left;
+     } */
+
+}
